@@ -1,17 +1,15 @@
 %{
 #include<stdio.h>
 %}
-
 %%
-[A-Z]+[ \t\n] {printf("%s is a capital letter", yytext);}
+[A-Z]+ {printf("%s are the capital letters",yytext);}
 . ;
 %%
 int main()
 {
-printf("\n Enter the input string:");	
+printf("enter the string: ");
 yylex();
 }
-
 int yywrap()
 {
 return 1;
